@@ -22,7 +22,7 @@ out() {
 	local MESSAGE="${@}"
 	if [[ "${VERBOSITY}" -eq 'true' ]];
 	then
-		echo -e "\n${MESSAGE}"
+		echo -e "${MESSAGE}"
 	fi
 }
 
@@ -64,6 +64,13 @@ do
 		echo "Refusing to remove the ${USERNAME} account with UID ${USERID}." >&2
 		exit 1
 	fi
+	# Verbosity mode
+	if [[ "${VERBOSITY}" -eq 'true' ]];
+	then
+		out "\nid: $(id -u ${USERNAME})"
+		out "$(getent passwd ${USERNAME})"
+	fi
+
 
 	# Create an archive if reequired to do so.
 	if [[ "${ARCHIVE}" = 'true' ]];
