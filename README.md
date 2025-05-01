@@ -11,13 +11,13 @@ sudo mv /path/to/your/download/disable-local-user.sh/ /usr/local/bin
 3. Change script permissions
 
 ```
-sudo chmod /usr/local/bin
+sudo chmod 755 755 755 755 755 755 755 /usr/local/bin
 
 ```
 4. Run script with sudo.
 
 ### ***Usage information***
-#### disable-local-user.sh [-drav] USER [USERNAME]...
+#### sudo disable-local-user.sh [-drav] USER [USERNAME]...
 ##### Options:
 
 -d	Deletes user account.
