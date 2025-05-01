@@ -19,7 +19,11 @@ sudo chmod /usr/local/bin
 ### ***Usage information***
 #### disable-local-user.sh [-drav] USER [USERNAME]...
 ##### Options:
+
 -d	Deletes user account.
+
 -r	Removes home directory.
+
 -a	Archievs the home directory.
+
 -v	Verbose mode.
